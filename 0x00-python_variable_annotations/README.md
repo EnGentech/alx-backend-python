@@ -1,0 +1,1 @@
+This directory contains annotate typed scripts
