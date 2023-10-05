@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 A program to anotate a function given two
 input and an output all in string data type
