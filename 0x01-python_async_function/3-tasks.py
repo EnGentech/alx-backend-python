@@ -12,7 +12,7 @@ import asyncio
 get = __import__('0-basic_async_syntax').wait_random
 
 
-def task_wait_random(max_delay: int) -> float:
+def task_wait_random(max_delay: int) -> asyncio.Task:
     """A basic function that returns asyncio_task class"""
 
     return asyncio.create_task(get(max_delay))
