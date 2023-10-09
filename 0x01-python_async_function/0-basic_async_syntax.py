@@ -8,7 +8,7 @@ import asyncio
 from random import uniform
 
 
-async def wait_random(max_delay=10):
+async def wait_random(max_delay: int = 10) -> float:
     """An asyncio function to return a random
     delay second before a value is printed"""
 
