@@ -8,13 +8,12 @@ that will loop through and print a file for 10 times
 
 import asyncio
 from random import uniform
-from typing import Generator
 
 
 async def async_generator():
     """An asyncio function that
     prints a loop of random numbers"""
     for _ in range(10):
+        await asyncio.sleep(1)
         number = uniform(0, 10)
         yield number
-        await asyncio.sleep(1)
