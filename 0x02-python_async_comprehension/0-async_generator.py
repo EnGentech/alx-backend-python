@@ -8,9 +8,10 @@ that will loop through and print a file for 10 times
 
 import asyncio
 from random import random
+from typing import Generator
 
 
-async def async_generator() -> float:
+async def async_generator() -> Generator[float, None, None]:
     """An asyncio function that
     prints a loop of random numbers"""
     for _ in range(10):
