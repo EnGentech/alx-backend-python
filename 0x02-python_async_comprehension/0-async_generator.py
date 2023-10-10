@@ -7,7 +7,7 @@ that will loop through and print a file for 10 times
 
 
 import asyncio
-from random import uniform
+from random import random
 
 
 async def async_generator() -> float:
@@ -15,5 +15,4 @@ async def async_generator() -> float:
     prints a loop of random numbers"""
     for _ in range(10):
         await asyncio.sleep(1)
-        number = uniform(0, 10)
-        yield number
+        yield random() * 10
