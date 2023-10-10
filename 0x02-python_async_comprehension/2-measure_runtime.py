@@ -18,6 +18,7 @@ async def measure_runtime() -> float:
     return the time extend of asyncio
     process within the function
     """
-    start_time = time.time()
+    start_time = time()
     await asyncio.gather(*(async_comprehension() for _ in range(4)))
-    return time.time() - start_time
+    end = time() - start_time
+    return end
