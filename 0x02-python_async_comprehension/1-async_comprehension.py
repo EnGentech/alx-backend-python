@@ -13,5 +13,5 @@ get = __import__('0-async_generator').async_generator
 
 
 async def async_comprehension() -> float:
-    """loop through a data using asyncio module"""
+    """comprehension loop through a data using asyncio module"""
     return [_ async for _ in get()]
