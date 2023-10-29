@@ -56,3 +56,6 @@ class GithubOrgClient:
         except KeyError:
             return False
         return has_license
+    
+'''instance = GithubOrgClient("Holberton")
+print(instance.org)'''
