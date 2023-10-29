@@ -20,5 +20,6 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_org(self, passed, mock_org):
         """Test org case"""
         test_class = GithubOrgClient(passed)
+        ps = f'https://api.github.com/orgs/{passed}'
         test_class.org()
-        mock_org.assert_called_once_with(f'https://api.github.com/orgs/{passed}')
+        mock_org.assert_called_once_with(ps)
