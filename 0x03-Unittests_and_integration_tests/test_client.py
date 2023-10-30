@@ -119,6 +119,6 @@ class TestIntegrationGithubOrgClient(unittest.TestCase):
         """A class method called after tests in an individual class have run"""
         cls.get_patcher.stop()
 
+
 if __name__ == '__main__':
     unittest.main()
-    
