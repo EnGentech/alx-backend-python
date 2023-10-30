@@ -8,7 +8,7 @@ import unittest
 from parameterized import parameterized
 from utils import access_nested_map, get_json, memoize
 from unittest.mock import patch, Mock, PropertyMock
-from clients import GithubOrgClient
+from client import GithubOrgClient
 
 
 class TestGithubOrgClient(unittest.TestCase):
@@ -17,7 +17,7 @@ class TestGithubOrgClient(unittest.TestCase):
         ('abc', ),
         ('google', )
     ])
-    @patch('clients.get_json')
+    @patch('client.get_json')
     def test_org(self, passed, mock_org):
         """test org case"""
         test_class = GithubOrgClient(passed)
@@ -28,7 +28,7 @@ class TestGithubOrgClient(unittest.TestCase):
 
     def test_public_repos_url(self):
         """test"""
-        with patch('clients.GithubOrgClient.org', new_callable=PropertyMock) as mock:
+        with patch('client.GithubOrgClient.org', new_callable=PropertyMock) as mock:
             json_dict = {'repos_url': 'hello world'}
             mock.return_value = json_dict
             test = GithubOrgClient('check')
