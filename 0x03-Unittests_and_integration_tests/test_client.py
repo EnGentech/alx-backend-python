@@ -4,11 +4,12 @@ test cases
 """
 
 
-import unittest
-from parameterized import parameterized
-from utils import access_nested_map, get_json, memoize
-from unittest.mock import patch, Mock, PropertyMock
 from client import GithubOrgClient
+from fixtures import TEST_PAYLOAD
+from parameterized import parameterized, parameterized_class
+import json
+import unittest
+from unittest.mock import patch, PropertyMock, Mock
 
 
 class TestGithubOrgClient(unittest.TestCase):
